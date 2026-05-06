@@ -1,5 +1,10 @@
 # laravel-pretty-slack-logs
 
+[![Tests](https://github.com/justrau/laravel-pretty-slack-logs/actions/workflows/tests.yml/badge.svg)](https://github.com/justrau/laravel-pretty-slack-logs/actions/workflows/tests.yml)
+[![Latest Version](https://img.shields.io/packagist/v/justrau/laravel-pretty-slack-logs.svg)](https://packagist.org/packages/justrau/laravel-pretty-slack-logs)
+[![Total Downloads](https://img.shields.io/packagist/dt/justrau/laravel-pretty-slack-logs.svg)](https://packagist.org/packages/justrau/laravel-pretty-slack-logs)
+[![License](https://img.shields.io/packagist/l/justrau/laravel-pretty-slack-logs.svg)](LICENSE)
+
 A drop-in Slack log channel for Laravel that turns the noisy default error dump into a structured, color-coded Block Kit message — with HTTP request context, git/host info, app-frame Location, Caused-by chains, and JSON context.
 
 ## What you get

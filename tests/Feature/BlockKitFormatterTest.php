@@ -1,6 +1,7 @@
 <?php
 
 use JustRau\PrettySlackLogs\Slack\BlockKitFormatter;
+use JustRau\PrettySlackLogs\Tests\Support\Thrower;
 use Monolog\Level;
 use Monolog\LogRecord;
 
@@ -126,4 +127,41 @@ it('truncates extremely long messages with a marker', function () {
         ->first(fn (array $b) => str_contains(blockText($b), '*Message*'));
 
     expect(blockText($messageBlock))->toContain('… (truncated)');
+});
+
+it('renders the console source block when running in CLI', function () {
+    $payload = (new BlockKitFormatter)->format(makeRecord());
+
+    $consoleBlock = collect(payloadBlocks($payload))
+        ->first(fn (array $b) => str_contains(blockText($b), '*Console*'));
+
+    expect($consoleBlock)->not->toBeNull();
+});
+
+it('emits a stack section when the exception has app frames', function () {
+    $payload = (new BlockKitFormatter)->format(makeRecord(context: ['exception' => Thrower::plain()]));
+
+    $stack = collect(payloadBlocks($payload))
+        ->first(fn (array $b) => str_contains(blockText($b), '*Stack (app frames)*'));
+
+    expect($stack)->not->toBeNull()
+        ->and(blockText($stack))->not->toContain('/vendor/')
+        ->and(blockText($stack))->toContain('Thrower');
+});
+
+it('emits a footer with the formatted timestamp', function () {
+    $payload = (new BlockKitFormatter)->format(makeRecord());
+
+    $footer = collect(payloadBlocks($payload))->last();
+
+    expect($footer['type'])->toBe('context')
+        ->and(blockText($footer))->toMatch('/\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}/');
+});
+
+it('includes a host segment in the env line', function () {
+    $payload = (new BlockKitFormatter)->format(makeRecord());
+
+    $envBlock = payloadBlocks($payload)[1];
+
+    expect(blockText($envBlock))->toContain('host: `');
 });
