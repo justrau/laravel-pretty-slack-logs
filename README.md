@@ -7,6 +7,20 @@
 
 A drop-in Slack log channel for Laravel that turns the noisy default error dump into a structured, color-coded Block Kit message — with HTTP request context, git/host info, app-frame Location, Caused-by chains, and JSON context.
 
+## Screenshots
+
+![Exception with a Caused-by chain](docs/screenshots/exception-with-cause.png)
+
+*A domain-level error wrapping a vendor-side cause — env header, request context, app-frame Location, stack trace, and the chained `Caused by`.*
+
+![Critical alert with rich JSON context](docs/screenshots/critical-with-context.png)
+
+*`Log::critical(...)` with a structured context array — rendered as pretty-printed JSON.*
+
+![Database query exception](docs/screenshots/query-exception.png)
+
+*`Illuminate\Database\QueryException` with the SQL embedded in the message and a `Caused by PDOException` in the trace below (cropped).*
+
 ## What you get
 
 Every error sent to Slack includes:
