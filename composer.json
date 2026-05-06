@@ -1,0 +1,59 @@
+{
+    "name": "justrau/laravel-pretty-slack-logs",
+    "description": "Pretty Slack log channel for Laravel — formats errors as rich Block Kit messages with request context, git/host info, app-frame Location, Caused-by chains, and JSON context.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "slack",
+        "logging",
+        "monolog",
+        "block-kit",
+        "errors",
+        "exceptions"
+    ],
+    "homepage": "https://github.com/justrau/laravel-pretty-slack-logs",
+    "authors": [
+        {
+            "name": "Justas Raudonius",
+            "email": "justas.raudonius@gmail.com",
+            "homepage": "https://github.com/justrau"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/contracts": "^11.0|^12.0|^13.0",
+        "illuminate/http": "^11.0|^12.0|^13.0",
+        "illuminate/log": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "monolog/monolog": "^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "pestphp/pest": "^3.0|^4.0",
+        "pestphp/pest-plugin-laravel": "^3.0|^4.0",
+        "laravel/pint": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Justrau\\PrettySlackLogs\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Justrau\\PrettySlackLogs\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
