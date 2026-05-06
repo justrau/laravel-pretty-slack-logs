@@ -1,8 +1,8 @@
 <?php
 
-namespace Justrau\PrettySlackLogs\Tests;
+namespace JustRau\PrettySlackLogs\Tests;
 
-use Justrau\PrettySlackLogs\Channel;
+use JustRau\PrettySlackLogs\Channel;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase

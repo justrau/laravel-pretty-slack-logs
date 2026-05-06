@@ -37,7 +37,7 @@ composer require justrau/laravel-pretty-slack-logs
 Add a channel to `config/logging.php`:
 
 ```php
-use Justrau\PrettySlackLogs\Channel;
+use JustRau\PrettySlackLogs\Channel;
 
 return [
     'channels' => [

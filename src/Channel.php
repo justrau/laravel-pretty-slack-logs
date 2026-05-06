@@ -1,9 +1,9 @@
 <?php
 
-namespace Justrau\PrettySlackLogs;
+namespace JustRau\PrettySlackLogs;
 
-use Justrau\PrettySlackLogs\Slack\BlockKitFormatter;
-use Justrau\PrettySlackLogs\Slack\BlockKitHandler;
+use JustRau\PrettySlackLogs\Slack\BlockKitFormatter;
+use JustRau\PrettySlackLogs\Slack\BlockKitHandler;
 use Monolog\Level;
 use Monolog\Logger;
 

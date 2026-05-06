@@ -1,6 +1,6 @@
 <?php
 
-namespace Justrau\PrettySlackLogs\Slack;
+namespace JustRau\PrettySlackLogs\Slack;
 
 use Illuminate\Support\Facades\Http;
 use Monolog\Handler\AbstractProcessingHandler;

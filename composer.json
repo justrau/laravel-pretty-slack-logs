@@ -36,12 +36,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Justrau\\PrettySlackLogs\\": "src/"
+            "JustRau\\PrettySlackLogs\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Justrau\\PrettySlackLogs\\Tests\\": "tests/"
+            "JustRau\\PrettySlackLogs\\Tests\\": "tests/"
         }
     },
     "scripts": {

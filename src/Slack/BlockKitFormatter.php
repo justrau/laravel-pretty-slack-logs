@@ -1,6 +1,6 @@
 <?php
 
-namespace Justrau\PrettySlackLogs\Slack;
+namespace JustRau\PrettySlackLogs\Slack;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;

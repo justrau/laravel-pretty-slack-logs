@@ -1,6 +1,6 @@
 <?php
 
-use Justrau\PrettySlackLogs\Slack\BlockKitFormatter;
+use JustRau\PrettySlackLogs\Slack\BlockKitFormatter;
 use Monolog\Level;
 use Monolog\LogRecord;
 
