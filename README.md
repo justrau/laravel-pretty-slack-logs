@@ -9,15 +9,15 @@ A drop-in Slack log channel for Laravel that turns the noisy default error dump 
 
 ## Screenshots
 
-![Exception with a Caused-by chain](docs/screenshots/exception-with-cause.png)
+<img src="docs/screenshots/exception-with-cause.png" alt="Exception with a Caused-by chain" width="500">
 
 *A domain-level error wrapping a vendor-side cause — env header, request context, app-frame Location, stack trace, and the chained `Caused by`.*
 
-![Critical alert with rich JSON context](docs/screenshots/critical-with-context.png)
+<img src="docs/screenshots/critical-with-context.png" alt="Critical alert with rich JSON context" width="500">
 
 *`Log::critical(...)` with a structured context array — rendered as pretty-printed JSON.*
 
-![Database query exception](docs/screenshots/query-exception.png)
+<img src="docs/screenshots/query-exception.png" alt="Database query exception" width="500">
 
 *`Illuminate\Database\QueryException` with the SQL embedded in the message and a `Caused by PDOException` in the trace below (cropped).*
 
